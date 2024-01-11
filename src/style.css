@@ -1,0 +1,64 @@
+body {
+    font-size: 24px;
+    font-family: 'Alegreya', serif;
+}
+
+.page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.falling-text-container p {
+    margin: 2em 0;
+}
+
+.hovered {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hovered:hover {
+    opacity: .3;
+    transition: opacity .1s;
+}
+
+.falling {
+    position: fixed;
+    z-index: 200;
+    animation: fallingWord linear 20s;
+}
+
+@keyframes fallingWord {
+    from {
+    }
+    to {
+	transform: translateY(100vh);
+    }
+}
+
+.spinning {
+    display: block;
+    animation: spinningWord linear infinite 2s;
+}
+
+@keyframes spinningWord {
+    from {
+	transform: rotate(0);
+    }
+    to {
+	transform: rotate(360deg);
+    }
+}
+
+.red {
+    color: #f00;
+}
+
+.highlighted {
+    background: #ff0;
+}
+
+.censored {
+    background: #000;
+}
